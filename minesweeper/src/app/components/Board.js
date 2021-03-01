@@ -50,6 +50,33 @@ class Board extends Component {
 			});
 	}
 
+	boardClicked(evt) {
+		const {classList} = evt.target;
+		if (classList.contains('cell') && !classList.contains('cell-state-cleared')) {
+			const cellId = +evt.target.getAttribute('data-cell');
+			const {button} = evt.nativeEvent;
+
+			if (button === 0) {
+				// button is 0 for left click
+				this.props.onCellClick(cellId, true);
+			}
+			else if (button === 2) {
+				// button is 2 for right click
+				evt.preventDefault();
+				this.props.onCellClick(cellId, false);
+			}
+		} else {
+			evt.preventDefault();
+		}
+	}
+
+	boardMouseOver(evt) {
+		const {classList} = evt.target;
+		if (classList.contains('cell')) {
+			const cellId = +evt.target.getAttribute('data-cell');
+			this.props.onCellMouseOver(cellId);
+		}
+	}
 }
 
 export default Board;
