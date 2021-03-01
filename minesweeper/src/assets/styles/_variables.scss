@@ -1,0 +1,28 @@
+// GLOBAL
+$app-bg-color: #f7f7f7;
+$text-color: #333;
+$font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+$app-min-width: 1000px;
+
+
+// HEADER
+$header-bg-color: #333;
+$header-text-color: #fff;
+
+
+// BOARD
+$board-paused-bg-color: #eee;
+$board-border-color: #e1e1e1;
+$board-border: 4px solid $board-border-color;
+
+$win-color: #65de54;
+$win-color-darker: #38b027;
+
+$lose-color: #f34d4d;
+$lose-color-darker: #e01310;
+
+$timer-color: #eee;
+$timer-color-darker: #ccc;
+
+$counter-text-color: #fff;
+$board-header-border-color: #ccc;
