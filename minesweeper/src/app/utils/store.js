@@ -8,3 +8,7 @@ const reducers = combineReducers({
 	controls: controlsReducer
 });
 
+export default createStore(
+	reducers,
+	applyMiddleware(thunk)
+);
