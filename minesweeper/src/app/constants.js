@@ -18,6 +18,4 @@ export const CELL_STATE_6 = 6;
 export const CELL_STATE_7 = 7;
 export const CELL_STATE_8 = 8;
 
-
-// proximity counts
 export const PROXIMITY_IS_MINE = -1;

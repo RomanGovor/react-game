@@ -61,7 +61,6 @@ class Board extends Component {
 				this.props.onCellClick(cellId, true);
 			}
 			else if (button === 2) {
-				// button is 2 for right click
 				evt.preventDefault();
 				this.props.onCellClick(cellId, false);
 			}

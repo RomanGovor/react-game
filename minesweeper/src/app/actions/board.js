@@ -26,7 +26,6 @@ export const cellReveal = cellId => {
 
 		const {board} = getState();
 
-		// If number of remaining uncleared cells is equal to mines remaining, game is won
 		if (board.board.filter(code => code === CELL_STATE_UNCLEARED).length === board.minesRemaining) {
 			dispatch(gameWon());
 		}
@@ -147,21 +146,17 @@ export const keyPressed = (shiftKey, keyCode) => {
 		if (shiftKey) {
 			switch (keyCode) {
 				case 80:
-					// Ctrl + P - pause
 					if (board.isStarted && !board.isFinished) {
 						dispatch(pauseGame());
 					}
 					break;
 				case 82:
-					// Ctrl + R - replay
 					dispatch(replayGame());
 					break;
 				case 78:
-					// Ctrl + N - new game
 					dispatch(newGame());
 					break;
 				case 72:
-					// Ctrl + H - help
 					dispatch(controls.isHelpModalOpen ? closeHelpModal() : openHelpModal());
 					break;
 				default:
@@ -173,7 +168,6 @@ export const keyPressed = (shiftKey, keyCode) => {
 			let nextCell;
 			switch (keyCode) {
 				case 37:
-					// left arrow
 					nextCell = focusedCell - 1;
 					if (Math.floor(nextCell / numCols) !== row) {
 						nextCell += numCols;
@@ -181,7 +175,6 @@ export const keyPressed = (shiftKey, keyCode) => {
 					dispatch(cellFocus(nextCell));
 					break;
 				case 38:
-					// up arrow
 					nextCell = focusedCell - numCols;
 					if (nextCell < 0) {
 						nextCell += numCols * numRows;
@@ -189,7 +182,6 @@ export const keyPressed = (shiftKey, keyCode) => {
 					dispatch(cellFocus(nextCell));
 					break;
 				case 39:
-					// right arrow
 					nextCell = focusedCell + 1;
 					if (Math.floor(nextCell / numCols) !== row) {
 						nextCell -= numCols;
@@ -197,7 +189,6 @@ export const keyPressed = (shiftKey, keyCode) => {
 					dispatch(cellFocus(nextCell));
 					break;
 				case 40:
-					// down arrow
 					nextCell = focusedCell + numCols;
 					if (nextCell >= numCols * numRows) {
 						nextCell %= numCols;
@@ -206,11 +197,9 @@ export const keyPressed = (shiftKey, keyCode) => {
 					break;
 				case 13:
 				case 82:
-					// Enter or R - reveal
 					dispatch(cellClick(focusedCell, true));
 					break;
 				case 70:
-					// F - flag/unflag
 					dispatch(cellClick(focusedCell, false));
 					break;
 				default:

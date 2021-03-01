@@ -4,7 +4,6 @@ import {
 import {mapProximityCountToCellState} from '../../../utils/mapProximityCountToCellState';
 
 export const gameWonMapper = (state, action) => {
-	// clear any remaining uncleared cells
 	const {proximity, board} = state;
 	const boardFinal = board
 		.map((cellState, i) => {

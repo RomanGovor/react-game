@@ -15,13 +15,9 @@ export function generateMines(numRows, numCols, numMines, initialCellId) {
 		const index = Math.floor(Math.random() * numCells);
 
 		if (index === initialCellId || mines[index] === MINE_STATE_MINE) {
-			// Don't put a mine in the initial cell!
 			continue;
 		}
 
-		// do a density calculation where cells around the initial cell id
-		// are much less likely to contain mines, so that a space is more likely
-		// to open up when a game is first started.
 		if (adjCells1.indexOf(index) !== -1) {
 			if (Math.random() > 0.1) {
 				continue;

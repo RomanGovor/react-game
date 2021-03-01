@@ -9,11 +9,7 @@ export function openSpace(board, proximity, cellId, numRows, numCols) {
 		return board;
 	}
 
-	// The initial cells to check includes just the clicked cell
 	const cellsToCheck = [cellId];
-
-	// First find the region of cells surrounding the clicked cell that have no mines nearby
-	// (i.e. proximity count is zero)
 
 	const filterCellsToCheck = cellId => {
 		return cellsToCheck.indexOf(cellId) === -1 &&
