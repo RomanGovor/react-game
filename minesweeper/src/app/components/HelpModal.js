@@ -68,10 +68,6 @@ const HelpModalComponent = props => (
 				</tr>
 			</tbody>
 		</table>
-
-		<h2>About</h2>
-		<p>Built by David Banks. View the code at the <a href="https://github.com/DavidBanksNZ/react-redux-minesweeper">GitHub Project Page</a>.</p>
-
 	</div>
 );
 

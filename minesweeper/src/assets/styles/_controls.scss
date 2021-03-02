@@ -10,6 +10,7 @@
 			border: $control-border;
 			outline: none;
 			width: 3em;
+			border-radius: 50%;
 
 			&:invalid {
 				border: 1px solid $input-invalid-border-color;
@@ -17,6 +18,7 @@
 		}
 
 		label {
+			font-weight: 900;
 			margin-right: 0.5em;
 			color: $control-label-color;
 		}
@@ -24,9 +26,10 @@
 }
 
 button {
+	border-radius: 30px;
 	border: $control-border;
 	cursor: pointer;
-	background: linear-gradient(to bottom, $button-bg-color-1, $button-bg-color-2);
+	background: linear-gradient(to bottom, cadetblue, $button-bg-color-2);
 	padding: 12px;
 	font-size: 0.9em;
 	outline: none;

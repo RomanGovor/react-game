@@ -455,19 +455,22 @@ html {
   border: 1px solid #ccc;
   outline: none;
   width: 3em;
+  border-radius: 50%;
 }
 .control-row .control input:invalid {
   border: 1px solid #e01310;
 }
 .control-row .control label {
+  font-weight: 900;
   margin-right: 0.5em;
   color: #777;
 }
 
 button {
+  border-radius: 30px;
   border: 1px solid #ccc;
   cursor: pointer;
-  background: linear-gradient(to bottom, #fff, #eee);
+  background: linear-gradient(to bottom, cadetblue, #eee);
   padding: 12px;
   font-size: 0.9em;
   outline: none;
@@ -502,13 +505,13 @@ button:not(:disabled):hover, button:not(:disabled):active {
   border: 1px solid #333;
 }
 .cell.cell-state-uncleared, .cell.cell-state-reveal-mine-unfound {
-  background: linear-gradient(to top left, #9aa4cf, #8791c0);
+  background: linear-gradient(to top left, #65de54, #8791c0);
 }
 .cell.cell-state-cleared {
   cursor: default;
 }
 .cell.cell-state-flagged {
-  background: url(../images/flag.gif) 50% 50%/50% no-repeat, linear-gradient(to top left, #9aa4cf, #8791c0);
+  background: url(../images/flag.gif) 50% 50%/50% no-repeat, linear-gradient(to top left, #65de54, #8791c0);
 }
 .cell.cell-state-hit-mine {
   background-color: #f34d4d;
@@ -605,6 +608,50 @@ button:not(:disabled):hover, button:not(:disabled):active {
   font-size: 2rem;
   color: #f34d4d;
   cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  height: 84px;
+  width: 100%;
+  background: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  max-width: 1600px;
+  padding: 0 79px;
+}
+.footer__author, .footer__courses {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.footer__author > a, .footer__courses > a {
+  text-decoration: none;
+}
+.footer__logo {
+  position: relative;
+  width: 121px;
+  height: 60px;
+  bottom: -10px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 0 10px;
+  }
+  .footer__author, .footer__courses {
+    font-size: 1.4rem;
+  }
+  .footer__logo {
+    transform: scale(0.75);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

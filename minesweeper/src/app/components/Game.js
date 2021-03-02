@@ -6,6 +6,7 @@ import {cellClick, cellFocus, keyPressed, newGame, pauseGame, replayGame, update
 import {closeHelpModal, openHelpModal, setColumns, setRows, setTotalMines} from '../actions/controls';
 import HelpModalComponent from './HelpModal';
 import Header from './Header';
+import Footer from "./Footer";
 
 class Game extends Component {
 
@@ -42,6 +43,7 @@ class Game extends Component {
 					/>
 					{this.renderHelp()}
 				</div>
+				<Footer />
 			</div>
 
 		);
